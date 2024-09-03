@@ -1,0 +1,505 @@
+
+/* Ensure all elements inherit box-sizing and font-family */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Body styles */
+body {
+    background-color: #f2f2f2; /* Light grey background */
+}
+.search-tag {
+    background-color: #f2f2f2;
+    color: #333;
+    padding: 5px 10px;
+    margin-right: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.highlight {
+    background-color: yellow; /* Highlight color */
+    color: black; /* Text color of highlighted term */
+    font-weight: bold; /* Optional: make it bold */
+}
+
+
+/* Navigation styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5a5757; /* Dark grey background */
+    padding: 10px 30px;
+}
+
+nav .icon img {
+    width: 100%; /* Ensures the logo image fits within the container */
+    max-width: 150px; /* Limits the logo image width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+nav .search_box {
+    display: flex;
+    align-items: center;
+}
+
+nav .search_box input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #fff; /* White background for input */
+    border-radius: 5px; /* Rounded corners */
+    width: 200px; /* Adjust width as needed */
+}
+
+nav .search_box span {
+    color: blue; /* Color for search icon */
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav .search_box span ion-icon {
+    font-size: 20px;
+}
+
+nav ol {
+    display: flex;
+    list-style-type: none; /* Removes default list styling */
+}
+
+nav ol li {
+    margin: 0 10px; /* Adjust spacing between navigation items */
+}
+
+nav ol li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ol li a:hover {
+    background-color: #000; /* Dark background on hover */
+}
+
+nav .bar {
+    display: none; /* Initially hides the menu toggle button */
+    cursor: pointer;
+}
+
+nav .bar span {
+    padding: 10px;
+    color: #fff; /* White color for menu icons */
+    font-size: 24px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav .icon {
+        margin-bottom: 10px; /* Spacing between logo and search box */
+    }
+
+    nav .search_box {
+        width: 100%;
+        margin-bottom: 10px; /* Spacing between search box and navigation */
+    }
+
+    nav ol {
+        flex-direction: column;
+        background-color: #5a5757;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ol li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ol li a {
+        padding: 15px 0;
+        display: block;
+    }
+
+    nav .bar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    #check:checked ~ nav ol {
+        height: auto;
+    }
+
+    #check:checked ~ nav .bar span:first-child {
+        display: none;
+    }
+
+    #check:checked ~ nav .bar span:last-child {
+        display: block;
+    }
+}
+
+
+/* Slider Styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%; /* Each slide takes full width */
+    position: relative;
+}
+
+.slides img {
+    width: 100%; /* Ensures image fills slide container */
+    height: 300px; /* Adjust height as needed */
+    object-fit: cover; /* Covers the slide with the image */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.slides img:hover {
+    transform: scale(1.05); /* Scale up image on hover for interactive effect */
+}
+
+.content-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    opacity: 0;
+    width: calc(100% - 40px); /* Adjust width as needed */
+}
+
+.slide:hover .content-overlay {
+    opacity: 1;
+}
+
+.content-overlay .content {
+    position: relative;
+    z-index: 1;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Dots Styles */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust margin as needed */
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #333;
+}
+
+
+.content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    z-index: 1;
+    width: 50%;
+    max-width: 400px;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Products Section */
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Scale up image on hover for interactive effect */
+}
+
+.product h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product p {
+    color: #666;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.footer-section .contact {
+    margin-top: 10px;
+}
+
+.footer-section .contact span {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-section .socials {
+    margin-top: 10px;
+}
+
+.footer-section .socials a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.footer-section .socials a:hover {
+    color: #ccc;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+/* Company Rating */
+.company-rating {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.rating-stars {
+    font-size: 24px; /* Adjust as necessary */
+    color: gold; /* Color for star icons */
+}
+.footer-section ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #fff;
+}
+
+.footer-section form {
+    margin-top: 20px;
+}
+
+.footer-section .text-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.footer-section .btn {
+    padding: 10px 20px;
+    background-color: #5a5757;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section .btn:hover {
+    background-color: #000;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav .icon {
+        margin-bottom: 10px;
+    }
+
+    nav .search_box {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    nav ol {
+        flex-direction: column;
+        background-color: #5a5757;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ol li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ol li a {
+        padding: 15px 0;
+        display: block;
+    }
+
+    nav .bar {
+        display: block;
+    }
+
+    #check:checked ~ nav ol {
+        height: auto;
+    }
+
+    #check:checked ~ nav .bar span:first-child {
+        display: none;
+    }
+
+    #check:checked ~ nav .bar span:last-child {
+        display: block;
+    }
+
+    .content {
+        width: 90%;
+        max-width: none;
+        left: 10px;
+        text-align: center;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-section {
+        flex: 1 1 auto;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}

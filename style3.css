@@ -1,0 +1,123 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    
+    text-align: left;
+   margin-top: 50px;
+   margin-left: 50px;
+   margin-right: 5px;
+   color: #000;
+   
+}
+
+
+
+.container
+{
+    position: relative;
+    width: 420px;
+    height: 500px;
+    
+    border-radius: 40px;  
+}
+.service h2
+{
+    position: relative;
+    margin-top: 10px;
+    min-height: 4vh;
+}
+.box
+{
+    justify-content: center;
+    min-height: 88vh;
+    background: #1c1c1c;
+    margin-bottom: 50px;
+}
+h2
+{
+    position: relative;
+    text-align: center;
+    letter-spacing: 0.05em;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(50, 245, 229);
+    padding: 25px;
+    font-size: 30px;
+}
+
+.inputBox button
+{
+    position: relative;
+   
+    margin-left: 5px;
+    width: 98%;
+    background-color: rgb(50, 245, 229);
+    margin-top: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    padding: 25px;
+   
+}
+.inputBox1 button
+{
+    position: relative;
+    margin-left: 5px;
+    background-color: rgb(245, 79, 50);
+    width: 98%;
+    
+    margin-top: 20px;
+    font-size: large;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    padding: 25px;
+   
+}
+.inputBox2 button
+{
+    position: relative;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+    width: 98%;
+    
+    margin-top: 20px;
+    font-size: large;
+    cursor: pointer;
+    background-color: rgb(50, 245, 229);
+    padding: 25px;
+   
+}
+.inputBox4 button
+{
+    position: relative;
+    margin-left: 5px;
+    letter-spacing: 0.5px;
+    width: 98%;
+    
+    margin-top: 20px;
+    font-size: large;
+    cursor: pointer;
+    background-color: rgb(50, 245, 229);
+    padding: 25px;
+   
+}
+.inputBox3 button
+{
+    position: relative;
+   
+    width: 98%;
+    margin-left: 5px;
+    background-color: rgb(245, 79, 50);
+    margin-top: 20px;
+    font-size: large;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    padding: 25px;
+   
+}
+
+   

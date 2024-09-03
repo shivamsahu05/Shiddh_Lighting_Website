@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 20px 5%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+
+        nav a:hover {
+            color: #e0f2f1;
+            border-bottom: 2px solid #e0f2f1;
+        }
+
+        /* Main section styling */
+        #about-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 5%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .about-left {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-left img {
+            width: 100%;
+            max-width: 700px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .about-left img:hover {
+            transform: scale(1.05);
+        }
+
+        .about-right {
+            width: 100%;
+            max-width: 700px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .about-right h2 {
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            color: #00796b;
+            border-bottom: 2px solid #00796b;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .about-right h4 {
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #004d40;
+        }
+
+        .about-right p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .company-info {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .company-info li {
+            font-size: 1.1em;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .address {
+            margin-bottom: 30px;
+        }
+
+        .address-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .address-item ion-icon {
+            font-size: 1.7em;
+            margin-right: 15px;
+            color: #00796b;
+        }
+
+        .address-item p {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .social-icons {
+            font-size: 1.6em;
+            margin-bottom: 30px;
+        }
+
+        .social-icons a {
+            color: #00796b;
+            margin: 0 12px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #004d40;
+            transform: scale(1.1);
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .content {
+            display: none;
+            padding: 20px;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #check:checked ~ .content {
+            display: block;
+        }
+
+        label {
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            background-color: #00796b;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        label:hover {
+            background-color: #004d40;
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #00796b;
+            color: #ffffff;
+            padding: 20px 5%;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .footer-content a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: #e0f2f1;
+        }
+
+        /* Responsive design */
+        @media only screen and (max-width: 1024px) {
+            #about-section {
+                padding: 50px 5%;
+            }
+
+            .about-left img {
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .about-right h2 {
+                font-size: 2.2em;
+            }
+
+            .about-right h4 {
+                font-size: 1.8em;
+            }
+
+            .company-info li {
+                font-size: 1em;
+            }
+
+            .address-item ion-icon {
+                font-size: 1.4em;
+            }
+
+            .social-icons {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">SHIDDH LIGHTING INDUSTRIES</div>
+        <nav>
+            <a href="#about-section">About Us</a>
+            <a href="ourproduct.php">Products</a>
+            <a href="service.html#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<section id="about-section">
+    <div class="about-left">
+        <img src="images/logob21.png" alt="SHIDDH LIGHTING logo">
+    </div>
+
+    <div class="about-right">
+        <h2>About Us</h2>
+        <h4>SHIDDH LIGHTING INDUSTRIES</h4>
+        <p>We are a leading manufacturer and supplier of a wide range of lighting products, including indoor and outdoor solutions. Established in 2021, we are committed to delivering high-quality products to meet diverse lighting needs.</p>
+
+        <ul class="company-info">
+            <li><strong>Nature of Business:</strong> Exporter and Manufacturer</li>
+            <li><strong>Year of Establishment:</strong> 2021</li>
+            <li><strong>Legal Status of Firm:</strong> Partnership Firm</li>
+        </ul>
+
+        <div class="address">
+            <div class="address-item">
+                <ion-icon name="location-outline"></ion-icon>
+                <p><strong>Address:</strong> Satna MP 485441</p>
+            </div>
+            <div class="address-item">
+                <ion-icon name="call-outline"></ion-icon>
+                <p><strong>Phone no.:</strong>+91 7869940934</p>
+            </div>
+            <div class="address-item">
+                <ion-icon name="mail-outline"></ion-icon>
+                <p><strong>Email:</strong> <a href="mailto:infoshiddh@gmail.com">infoshiddh@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61564997905671"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.youtube.com/@SHIDDHLightingIndustries"><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/shiddh-lighting-industries-447065325/"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="https://www.linkedin.com/in/shiddh-lighting-industries-447065325/"><ion-icon name="logo-linkedin"></ion-icon></a>
+
+        </div>
+
+        <div class="container">
+            <input type="checkbox" id="check">
+            <div class="content">
+                <p>
+                    SHIDDH Lighting Industries specializes in manufacturing and supplying LED products such as LED Bulbs, LED Battens, LED Lights, LED Smart Lights, and more. We use state-of-the-art machinery for testing, ensuring that all our products meet the highest quality standards.
+                    <br><br>
+                    Our extensive range includes LED bulbs from 0.5-Watt to 55-Watts in various colors, suitable for both indoor and outdoor applications.
+                    <br><br>
+                    <strong>Why Choose Us:</strong>
+                    <ul>
+                        <li>Cost-effective solutions</li>
+                        <li>Customization options</li>
+                        <li>On-time delivery</li>
+                        <li>High customer satisfaction</li>
+                    </ul>
+                </p>
+            </div>
+            <label for="check">Read More...</label>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2021 SHIDDH LIGHTING INDUSTRIES. All rights reserved.</p>
+        <a href="termcondition.html">Privacy Policy</a>
+        <a href="termcondition.html">Terms of Service</a>
+        <!-- <a href="#">Site</a> -->
+    </div>
+</footer>
+
+</body>
+</html>

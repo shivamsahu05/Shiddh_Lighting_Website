@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    background-color: #f2f2f2; /* Light grey background */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5a5757; /* Dark grey background */
+    padding: 10px 30px;
+}
+
+nav .icon img {
+    width: 100%; /* Ensures the logo image fits within the container */
+    max-width: 150px; /* Limits the logo image width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+nav .search_box {
+    display: flex;
+    align-items: center;
+}
+
+nav .search_box input[type="search"] {
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #fff; /* White background for input */
+    border-radius: 5px; /* Rounded corners */
+    width: 200px; /* Adjust width as needed */
+}
+
+nav .search_box span {
+    color: blue; /* Color for search icon */
+    padding: 8px;
+    cursor: pointer;
+}
+
+nav .search_box span ion-icon {
+    font-size: 20px;
+}
+
+nav ol {
+    display: flex;
+    list-style-type: none; /* Removes default list styling */
+}
+
+nav ol li {
+    margin: 0 10px; /* Adjust spacing between navigation items */
+}
+
+nav ol li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ol li a:hover {
+    background-color: #000; /* Dark background on hover */
+}
+
+nav .bar {
+    display: none; /* Initially hides the menu toggle button */
+    cursor: pointer;
+}
+
+nav .bar span {
+    padding: 10px;
+    color: #fff; /* White color for menu icons */
+    font-size: 24px;
+}
+
+section {
+    background-image: url('');
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    filter: brightness(30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+@media screen and (max-width: 1250px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    nav .icon {
+        margin-bottom: 10px; /* Spacing between logo and search box */
+    }
+
+    nav .search_box {
+        width: 100%;
+        margin-bottom: 10px; /* Spacing between search box and navigation */
+    }
+
+    nav ol {
+        flex-direction: column;
+        background-color: #5a5757;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+
+    nav ol li {
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ol li a {
+        padding: 15px 0;
+        display: block;
+    }
+
+    nav .bar {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    #check:checked ~ nav ol {
+        height: auto;
+    }
+
+    #check:checked ~ nav .bar span:first-child {
+        display: none;
+    }
+
+    #check:checked ~ nav .bar span:last-child {
+        display: block;
+    }
+}
+
+
+/* Footer styles */
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-section {
+    padding: 20px;
+    flex: 1;
+    max-width: 300px;
+}
+
+.footer-section h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.footer-section .contact {
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.footer-section .socials {
+    margin-top: 20px;
+}
+
+.footer-section .socials a {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #ccc;
+}
+
+.footer-section .socials a:hover {
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul a:hover {
+    color: #fff;
+}
+
+.footer-section .contact-form {
+    margin-top: 20px;
+}
+
+.contact-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-size: 14px;
+}
+
+.contact-input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

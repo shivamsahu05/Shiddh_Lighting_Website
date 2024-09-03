@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHIDDH Lighting Industries - Services</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.0.1/ionicons.min.css"> <!-- Ionicons for icons -->
+    <style>
+        /* Basic reset and global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header .logo {
+            width: 120px; /* Adjust the width as needed */
+            height: auto; /* Maintain aspect ratio */
+            margin-right: 10px; /* Provide spacing */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center; /* Align items vertically */
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ffc107;
+        }
+
+        .section {
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section p {
+            font-size: 1.1em;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .product {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .product p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        .product-details {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .product-details p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .key-differentiators {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .key-differentiators li {
+            margin: 0 15px;
+            font-size: 1.2em;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-details .address,
+        .contact-details .phone,
+        .contact-details .email {
+            flex: 1 1 300px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-details ion-icon {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 1.8em;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #ffc107;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header h1 {
+                margin-bottom: 10px;
+                font-size: 1.5em;
+            }
+
+            header nav ul {
+                margin-top: 10px;
+            }
+
+            header nav ul li {
+                margin-right: 15px;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section h2 {
+                font-size: 2em;
+            }
+
+            .product-list {
+                grid-template-columns: 1fr;
+            }
+
+            .key-differentiators {
+                flex-wrap: wrap;
+            }
+
+            .key-differentiators li {
+                margin: 10px 15px;
+            }
+
+            .contact-details .address,
+            .contact-details .phone,
+            .contact-details .email {
+                flex: 1 1 100%;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="images/logosl.png" alt="SHIDDH Lighting Industries Logo" class="logo">
+            <h1>SHIDDH Lighting Industries <sup>2021</sup></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#quality">Quality Assurance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>SHIDDH Lighting Industries is a recognized organization in the industry, involved in manufacturing, importing, and supplying a commendable array of indoor and outdoor lighting products.</p>
+            <ul class="company-info">
+                <li><strong>Nature of Business:</strong> Exporter and Manufacturer</li>
+                <li><strong>Year of Establishment:</strong> 2021</li>
+                <li><strong>Legal Status of Firm:</strong> Partnership Firm</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="products" class="section">
+        <div class="container">
+            <h2>Products Offered</h2>
+            <p>SHIDDH Lighting Industries manufactures and supplies a wide range of LED products:</p>
+            <div class="product-list">
+                <div class="product" id="led-bulbs" onclick="toggleDetails(this.id)">
+                    <h3>LED Bulbs</h3>
+                    <p>Ranging from 0.5-Watt to 55-Watts in various colors suitable for both indoor and outdoor lighting needs.</p>
+                    <div class="product-details">
+                        <p>Details about LED Bulbs...</p>
+                    </div>
+                </div>
+                <div class="product" id="led-battens" onclick="toggleDetails(this.id)">
+                    <h3>LED Battens</h3>
+                    <p>Long and rectangular light fixtures used mainly in commercial and industrial spaces.</p>
+                    <div class="product-details">
+                        <p>Details about LED Battens...</p>
+                    </div>
+                </div>
+                <div class="product" id="led-lights" onclick="toggleDetails(this.id)">
+                    <h3>LED Lights</h3>
+                    <p>General category of LED lighting solutions for various applications.</p>
+                    <div class="product-details">
+                        <p>Details about LED Lights...</p>
+                    </div>
+                </div>
+                <div class="product" id="more-products" onclick="toggleDetails(this.id)">
+                    <h3>More...</h3>
+                    <p>Explore our complete range including Panel Lights, Street Lights, Flood Lights, and more.</p>
+                    <div class="product-details">
+                        <p>Details about more products...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quality" class="section">
+        <div class="container">
+            <h2>Quality Assurance</h2>
+            <p>At SHIDDH Lighting Industries, quality is paramount. Our products undergo rigorous testing on the latest machines in our laboratory to ensure they meet high standards of performance and durability.</p>
+            <h3>Key Differentiators</h3>
+            <ul class="key-differentiators">
+                <li>Cost-effectiveness</li>
+                <li>Customization</li>
+                <li>Timely delivery</li>
+                <li>Maximum customer satisfaction</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="contact-details">
+                <div class="address">
+                    <ion-icon name="location-outline"></ion-icon>
+                    <p><strong>Address:</strong> Satna MP 485001</p>
+                </div>
+                <div class="phone">
+                    <ion-icon name="call-outline"></ion-icon>
+                    <p><strong>Phone:</strong> +91 7869 940 934</p>
+                </div>
+                <div class="email">
+                    <ion-icon name="mail-outline"></ion-icon>
+                    <p><strong>Email:</strong> <a href="mailto:infoshiddh@gmail.com">infoshiddh@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon></a>
+                <a href="https://www.youtube.com/@ShiddhElectric"><ion-icon name="logo-youtube"></ion-icon></a>
+                <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2021 SHIDDH Lighting Industries. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleDetails(productId) {
+            // Hide all product details
+            var allDetails = document.querySelectorAll('.product-details');
+            allDetails.forEach(function(detail) {
+                detail.style.display = 'none';
+            });
+
+            // Show details for the clicked product
+            var detailsToShow = document.getElementById(productId).querySelector('.product-details');
+            detailsToShow.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

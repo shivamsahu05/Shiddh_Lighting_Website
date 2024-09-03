@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+tr{
+    color: black;
+    /* background: #fff; */
+    background: linear-gradient(purple,red);
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+ .flex-container{
+     width: 100%;
+    
+    height: 100%;
+    background-color: aqua;
+    display: flex;
+  
+} 
+.info{
+    width: 70%;
+    padding: 20px;
+    
+}
+p{
+    color: black;
+    /* background: #fff; */
+    background: linear-gradient(#fff,rgb(0, 225, 255));
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    height: 40px;
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+}
+b{
+ 
+    background: linear-gradient(#fff,rgb(0, 225, 255));
+    padding: 17px;
+}
+button{
+    background: rgb(0, 255, 255);
+
+    top: 5px;
+    left: 50px;
+    height: 35px;
+    width: 70px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+#sub{
+    background: rgb(0, 255, 255);
+    position: relative;
+
+    /* left: 10px; */
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    margin-left: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input[type=button]{
+    background: rgb(0, 255, 255);
+    position: relative;
+
+    /* left: 10px; */
+    height: 30px;
+    width: 70px;
+    text-align: center;
+    margin-left: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+input[type=text],
+input[type=number]
+{
+    background-color: yellow;
+    padding: 10px;
+    height: 40px;
+}
+ .box-container{
+ width: 100%;
+    height: auto; 
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+/* .flex-box{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(purple,red);
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 20px;
+    margin: 10px;
+    
+} */

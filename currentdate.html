@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current Date Example</title>
+    <script>
+        // JavaScript code to get and display the current date
+        function displayCurrentDate() {
+            var currentDate = new Date();
+            var dateString = "Current Date: " + currentDate.toDateString();
+            document.getElementById("currentDate").innerHTML = dateString;
+        }
+    </script>
+</head>
+<body onload="displayCurrentDate()">
+    <h1>Current Date Example</h1>
+    <p id="currentDate"></p>
+</body>
+</html>
